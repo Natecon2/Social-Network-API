@@ -1,5 +1,3 @@
-// server.js
-
 const express = require('express');
 const mongoose = require('mongoose');
 const userRoutes = require('./userRoutes');
@@ -10,9 +8,8 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-// Use the user and thought routes
-app.use('/api', userRoutes); // Prefix user routes with '/api'
-app.use('/api', thoughtRoutes); // Prefix thought routes with '/api'
+app.use('/api', userRoutes);
+app.use('/api', thoughtRoutes);
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/social-network', {

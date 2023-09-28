@@ -1,3 +1,5 @@
+// routes/userRoutes.js
+
 const express = require('express');
 const router = express.Router();
 const { User } = require('../models');
@@ -78,3 +80,4 @@ router.delete('/users/:userId', async (req, res) => {
 });
 
 module.exports = router;
+
